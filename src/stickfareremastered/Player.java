@@ -69,7 +69,7 @@ public class Player {
         ResetMovementMeter = 50;
         healthbar = 10;
     }
-    //
+    
     public static void Create(int XP,int YP, int i){
             
             if(i == 0)
