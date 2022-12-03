@@ -333,41 +333,46 @@ public class Player {
                     g.fillRect(Window.getX(0)+xD*((plr.XPos)-plr.XSize/2) - plr.healthbar, Window.getY(0)+yD*plr.getyPos() - 15, (plr.getWidth()*xD * plr.healthbar) * 1/5, plr.getHeight()*yD/2);                  
                 }
                 
+                double misk = Maps.getWidth();
+                double mickey = (Window.MENU_WINDOW_HEIGHT/misk)/15;
                 if(plr.direction == Direction.RIGHT)
-                {             
+                {                                 
                     //Drawing.drawImage(image2,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(0)+yD*plr.getyPos(),plr.rotation,0.06,0.06 );         
                     //g.drawImage(image2,-Window.getX(-160)+xD*((plr.XPos)-plr.XSize/2),-Window.getY(-100)+yD*plr.getyPos(), plr.getWidth()*xD * 2,plr.getHeight()*yD,mainClassInst);
                     if(plr.MoveSpeed == 0)
                     {
-                        drawImage(g,image,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,0.1,0.1 );
+                        drawImage(g,image,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,mickey,mickey );
                     }
                     else if(plr.MoveSpeed != 0)
                     {
-                        drawImage(g,image3,Window.getX(10)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,0.1,0.1 );
+                        drawImage(g,image3,Window.getX(10)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,mickey,mickey );
                     }
-                    drawImage(g,image2,Window.getX(10)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),plr.rotation,0.12,0.12 );
+                    drawImage(g,image2,Window.getX(10)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),plr.rotation,mickey*1.2,mickey*1.2 );
                     plr.setSuperxPos(Window.getX(10)+xD*((plr.XPos)-plr.XSize/2));
                     plr.setSuperyPos(Window.getY(10)+yD*plr.getyPos());
+                   
                 }
                 else if(plr.direction == Direction.LEFT)
                 {
                    //Drawing.drawImage(image2,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(0)+yD*plr.getyPos(),plr.rotation,-0.06,0.06 );
                     if(plr.MoveSpeed == 0)
                     {
-                        drawImage(g,image,Window.getX(10)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,-0.1,0.1 );
+                        drawImage(g,image,Window.getX(10)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,-mickey,mickey );
                     }
                     else if(plr.MoveSpeed != 0)
                     {
-                        drawImage(g,image3,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,-0.1,0.1 );
+                        drawImage(g,image3,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),0.0,-mickey,mickey );
                     }
-                   drawImage(g,image2,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),plr.rotation,-0.12,0.12 );
+                   drawImage(g,image2,Window.getX(0)+xD*((plr.XPos)-plr.XSize/2),Window.getY(10)+yD*plr.getyPos(),plr.rotation,-mickey*1.2,mickey*1.2 );
                    plr.setSuperxPos(Window.getX(0)+xD*((plr.XPos)-plr.XSize/2));
                    plr.setSuperyPos(Window.getY(0)+yD*plr.getyPos());
+                   
                 }
 
             }
 
         }
+        
     }
     
     public static void drawImage(Graphics2D g,Image image,int xpos,int ypos,double rot,double xscale,

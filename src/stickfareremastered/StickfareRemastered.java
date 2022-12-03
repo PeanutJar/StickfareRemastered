@@ -280,7 +280,7 @@ public class StickfareRemastered extends JFrame implements Runnable {
              g.setFont(new Font("Arial Black", Font.BOLD, 60));
              g.drawString(Player.GetWinningPlayerString() + " Wins!", (Window.getWidth2()*1/2)-170, Window.getHeight2()/2);
          }
-
+         
          g.setColor(Color.WHITE);
          g.setFont(new Font("Arial Black", Font.PLAIN, 20));
          g.drawString("Angle: " + angle1, Window.getWidth2() * 1/8, Window.getHeight2() * 1/8);
