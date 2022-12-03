@@ -137,21 +137,26 @@ public class StickfareRemastered extends JFrame implements Runnable {
                   if(Player.GetCurrentPlayer().getRotation() >= -90)
                   {
                     double angle = (Math.atan2(PlayerY - (CursorY * 3/5 - 100), PlayerX - (CursorX - (CursorX * 6/11 + 10))) * 180 / Math.PI) - 180;
+                      //double angle = (Math.atan2((CursorY)-PlayerY, (CursorX)-PlayerX) * 180 / Math.PI) - 180;
                     angle1 = angle;
                     Player.GetCurrentPlayer().Rotate(angle);
                   }
                   else if(Player.GetCurrentPlayer().getRotation() <= -270)
                   {
                     double angle = (Math.atan2(PlayerY - (CursorY - (CursorY * 3/5 - 22)), PlayerX - (CursorX - (CursorX * 6/11 + 32))) * 180 / Math.PI) - 180;
+                      //double angle = (Math.atan2((CursorY)-PlayerY, (CursorX)-PlayerX) * 180 / Math.PI) - 180;
                     angle1 = angle;
                     Player.GetCurrentPlayer().Rotate(angle);
                   }
+                  
+
               }
             }
             else if(Player.GetCurrentPlayer().getDirection() == Player.Direction.LEFT)
             {
               if(Gun.getIsBulletAimActive())
               {
+                  
                   if(Player.GetCurrentPlayer().getRotation() <= 90)
                   {
                     double angle = (Math.atan2((CursorY - (CursorY * 3/5)) - PlayerY, (CursorX - (CursorX * 6/11)) - PlayerX) * 180 / Math.PI) + 180;
@@ -164,6 +169,8 @@ public class StickfareRemastered extends JFrame implements Runnable {
                     angle1 = angle;
                     Player.GetCurrentPlayer().Rotate(angle);
                   }
+
+
               }
             }
           }  

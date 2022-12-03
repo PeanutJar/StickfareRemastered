@@ -207,8 +207,8 @@ public class Player {
                     if (YPos+YSize+1 > 338 || Maps.getGrid(XPos,YPos+YSize+1) == "You fucked now, boy"){
                         XPos = StartingPosX;
                         YPos = StartingPosY;
-                        health -=60;
-                        healthbar -=6;
+                        health -=10;
+                        healthbar -=1;
                         MoveSpeed = 0;
                         FallSpeed = 0;
                         if(health > 0)
